@@ -1,0 +1,72 @@
+img[src*="mosque"] {
+    filter: drop-shadow(0 -5px 15px rgba(255, 215, 0, 0.2));
+}
+.glow {
+    animation: glowPulse 2s infinite ease-in-out;
+}
+
+@keyframes glowPulse {
+    0%,100% { filter: drop-shadow(0 0 10px gold); }
+    50% { filter: drop-shadow(0 0 25px gold); }
+}
+
+.lamp-img {
+    position: absolute;
+    width: 120px;
+    top: -10px;
+    animation: swing 4s ease-in-out infinite;
+    transform-origin: top center;
+}
+.lamp-left {
+    left: 0;
+    transform: scaleX(-1);
+    animation: swingLeft 4s ease-in-out infinite;
+    }
+
+@keyframes swingLeft {
+    0% { transform: scaleX(-1) rotate(0deg); }
+    50% { transform: scaleX(-1) rotate(6deg); }
+    100% { transform: scaleX(-1) rotate(0deg); }
+}
+/* Animasi ayunan */
+@keyframes swing {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(6deg); }
+    100% { transform: rotate(0deg); }
+}
+/* Cahaya */
+.light {
+    position: absolute;
+    background: rgba(255, 215, 0, 0.5);
+    border-radius: 50%;
+    filter: blur(4px);
+    animation: float linear infinite;
+}
+
+/* Animasi */
+@keyframes swing {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(6deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes twinkle {
+    0%,100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+@keyframes float {
+    from { transform: translateY(0); }
+    to { transform: translateY(-200px); }
+}
+
+/* Fade modal */
+.animate-fadeIn {
+    animation: fadeIn 0.5s ease;
+    -webkit-animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
