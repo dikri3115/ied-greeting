@@ -70,3 +70,9 @@ img[src*="mosque"] {
     from { transform: scale(0.8); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
 }
+
+
+/* clock*/
+#clock {
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}

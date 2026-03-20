@@ -41,3 +41,38 @@ modal.addEventListener("click", function (e) {
         closeModal();
     }
 });
+
+//clock
+function updateClock() {
+    const clock = document.getElementById("clock");
+    const now = new Date();
+
+    const hours = String(now.getHours()).padStart(2, "0");
+    const minutes = String(now.getMinutes()).padStart(2, "0");
+    const seconds = String(now.getSeconds()).padStart(2, "0");
+
+    const time = `${hours} : ${minutes} : ${seconds}`;
+
+    clock.textContent = time;
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+
+//Date
+function updateDate() {
+    const dateEl = document.getElementById("date");
+    const now = new Date();
+
+    const hari = now.toLocaleDateString("id-ID", { weekday: "long" });
+    const tanggal = now.toLocaleDateString("id-ID", {
+        day: "numeric",
+        month: "long",
+        year: "numeric"
+    });
+
+    dateEl.textContent = `${hari}, ${tanggal}`;
+}
+
+// jalankan sekali (tanggal tidak perlu update tiap detik)
+updateDate();

@@ -9,53 +9,62 @@
 </head>
 <body class="flex items-center justify-center h-screen bg-green-300">
     
-    <div class="text-center space-y-4">
-
+    <main class="text-center space-y-4">
+        <!-- Tanggal -->
+        <span id="date" class="fixed top-4 left-4 text-base text-white bg-black/50 px-3 py-1 rounded-lg backdrop-blur"></span>
+        <!-- Jam -->
+        <span id="clock" class="fixed top-4 right-4 text-base text-white bg-black/50 px-3 py-1 rounded-lg backdrop-blur shadow-lg"></span>
         <!-- Judul -->
         <h1 class="text-2xl md:text-3xl font-bold text-white-400 tracking-wide">
-            Selamat Idul Fitri
+            Selamat Idul Fitri<br>21 Maret 2026 / 1 Syawal 1447 H
         </h1>
 
         <!-- Subtext (opsional biar lebih elegan) -->
-        <p class="text-black-300 text-sm">
+        <h4 class="text-black-300 text-xl">
             Mohon maaf lahir dan batin
-        </p>
+        </h4>
 
         <!-- Tombol -->
         <button onclick="openModal()" class="px-6 py-3 bg-yellow-500 text-black font-semibold rounded-xl shadow-lg hover:bg-yellow-400 transition">
             Klik disini!
         </button>
 
-</div>
+    </main>
 
     <!-- Modal -->
-    <div id="modal" class="fixed inset-0 bg-black/70 hidden items-center justify-center">
+    <main id="modal" class="fixed inset-0 bg-black/70 hidden items-center justify-center">
 
-    <div id="card" class="relative w-[350px] h-[500px] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-b from-blue-900 to-blue-950 animate-fadeIn">
+        <section id="card" class="relative w-[350px] h-[500px] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-b from-blue-900 to-blue-950 animate-fadeIn">
 
-        <div class="absolute inset-0">
+            <div class="absolute inset-0">
 
-            <!-- Lampu kiri -->
-            <img src="images/lampion.png" class="lamp-img lamp-left left-0 top-0">
-            <!-- Lampu kanan -->
-            <img src="images/lampion.png" class="lamp-img right-0 top-0 scale-x-[-1]">
+                <!-- Lampu kiri -->
+                <img src="images/lampion.png" class="lamp-img lamp-left left-0 top-0">
+                <!-- Lampu kanan -->
+                <img src="images/lampion.png" class="lamp-img right-0 top-0 scale-x-[-1]">
 
+            </div>
+
+            <!-- Content -->
+            <div class="absolute bottom-20 w-full text-center px-6">
+                <img src="images/ied-mubarak.png" alt="Eid Mubarak" class="mx-auto mb-4 w-48 md:w-56 glow">
+                <p class="text-base text-gray-300">
+                    May peace, safety, good health and prosperity be yours.<br>
+                    تقبل الله منا ومنكم
+                </p>
+            </div>
+            <div class="absolute bottom-0 left-0 w-full z-0">
+                <img src="images/masjid.png" class="w-full opacity-80">
+
+                <div class="absolute inset-0 bg-gradient-to-t from-blue-950 via-transparent to-transparent"></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="fixed bottom-3 left-1/2 -translate-x-1/2 text-[11px] text-black-400 z-50">
+            © 2026 Copyright by Dzikri
         </div>
-
-        <!-- Content -->
-        <div class="absolute bottom-20 w-full text-center px-6">
-            <img src="images/ied-mubarak.png" alt="Eid Mubarak" class="mx-auto mb-4 w-48 md:w-56 glow">
-            <p class="text-sm text-gray-300">
-            May peace, safety, good health and prosperity be yours.<br>
-            تقبل الله منا ومنكم</p>
-        </div>
-        <div class="absolute bottom-0 left-0 w-full z-0">
-            <img src="images/masjid.png" class="w-full opacity-80">
-
-            <div class="absolute inset-0 bg-gradient-to-t from-blue-950 via-transparent to-transparent"></div>
-        </div>
-    </div>
-
+    </footer>
 <script src="js/script.js"></script>
 </body>
 </html>
